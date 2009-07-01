@@ -5,10 +5,10 @@ require "net/http"
 module Justlogging
 
   class << self
-    attr_accessor :host, :api_key, :log_key
+    attr_accessor :api_key, :log_key
     
     def url
-      URI.parse("http://#{host}/log")
+      URI.parse("http://logs.justlogging.com/log")
     end
     
     def logger
