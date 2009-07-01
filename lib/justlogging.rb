@@ -6,10 +6,6 @@ module Justlogging
 
   class << self
     attr_accessor :host, :api_key, :log_key
-
-    def configure
-      yield self
-    end
     
     def url
       URI.parse("http://#{host}/log")
@@ -21,7 +17,7 @@ module Justlogging
       @logger ||= Logger.new(STDERR)
     end
     
-    def log entry
+    def log(entry, log_key = self.log_key)
       params = {
         'log_key' => log_key,
         'entry' => entry,
