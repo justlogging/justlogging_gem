@@ -6,11 +6,7 @@ module Justlogging
 
   class << self
     attr_accessor :api_key, :log_key
-    
-    def url
-      URI.parse("http://logs.justlogging.com/log")
-    end
-    
+
     def logger
       ActiveRecord::Base.logger
     rescue
@@ -25,7 +21,7 @@ module Justlogging
       }
       
       response = begin
-        Net::HTTP.post_form(url, params)
+        Net::HTTP.post_form('http://logs.justlogging.com/log', params)
       rescue TimeoutError => e
         logger.error "Timeout while connecting to justlogging." if logger
         nil
