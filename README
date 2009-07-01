@@ -1,13 +1,13 @@
 Justlogging
 ===========
 
-Introduction goes here.
+This plugin enables easy logging to our webservice. Just install this plugin and Justlogging.log is available as a function that will send anything to justlogging.
 
 
 Example
 =======
 
-Example goes here.
+Justlogging.log('this is my first entry')
 
 
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Copyright (c) 2009 Justlogging, released under the MIT license
