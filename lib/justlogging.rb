@@ -13,6 +13,14 @@ module Justlogging
       @logger ||= Logger.new(STDERR)
     end
     
+    def configure
+      yield self
+    end
+    
+    def url
+      URI.parse('http://logs.justlogging.com/log')
+    end
+    
     def log(entry, log_key = self.log_key)
       params = {
         'log_key' => log_key,
@@ -21,7 +29,7 @@ module Justlogging
       }
       
       response = begin
-        Net::HTTP.post_form('http://logs.justlogging.com/log', params)
+        Net::HTTP.post_form(url, params)
       rescue TimeoutError => e
         logger.error "Timeout while connecting to justlogging." if logger
         nil
