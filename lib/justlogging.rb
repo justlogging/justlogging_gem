@@ -13,6 +13,10 @@ module Justlogging
       @logger ||= Logger.new(STDERR)
     end
     
+    def configure
+      yield self
+    end
+    
     def log(entry, log_key = self.log_key)
       params = {
         'log_key' => log_key,
