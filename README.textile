@@ -18,10 +18,7 @@ Just install it as a plugin:
 
 The generator copies a file called @justlogging.rb@ to the @RAILS_ROOT/config/initializer@ directory. You need to set you api key there and optionally your default log key.
 
-
-
 h2. Usage
-=======
 
 @Justlogging.log('this is my first entry')@
 
