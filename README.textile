@@ -14,7 +14,7 @@ Just install it as a plugin:
   $ ./script/plugin install git://github.com/justlogging/rails_logger.git
   $ ./script/generate justlogging
   </code>
-<pre>
+</pre>
 
 The generator copies a file called @justlogging.rb@ to the @RAILS_ROOT/config/initializer@ directory. You need to set you api key there and optionally your default log key.
 
