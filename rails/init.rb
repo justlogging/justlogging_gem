@@ -1,2 +1,2 @@
 # Include hook code here
-require 'justlogging'
+require File.dirname(__FILE__) + '../lib/justlogging')
