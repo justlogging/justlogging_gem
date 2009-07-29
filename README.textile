@@ -16,13 +16,30 @@ Just install it as a plugin:
   </code>
 </pre>
 
+Or install it as a gem:
+
+Add this to your enviroment.rb
+<pre>
+  <code>
+      config.gem "justlogging-rails_logger", :lib => 'justlogging'
+  </code>
+</pre>		
+and run 
+<pre>
+  <code>
+      rake gems:install
+      script/generate justlogging
+  </code>
+</pre>
+
 The generator copies a file called @justlogging.rb@ to the @RAILS_ROOT/config/initializer@ directory. You need to set you api key there and optionally your default log key.
+
+
 
 h2. Usage
 
 @Justlogging.log('this is my first entry')@
 
 Easy as pie.
-
 
 Copyright (c) 2009 Justlogging, released under the MIT license

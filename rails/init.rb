@@ -1,2 +1,2 @@
 # Include hook code here
-require 'justlogging'
+require '../lib/justlogging'
