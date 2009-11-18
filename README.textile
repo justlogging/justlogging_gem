@@ -10,40 +10,30 @@ For other languages checkout:
 h2. Install
 
 Install it as a gem (on gemcutter):
-
-<pre>
-  <code>
-    gem install justlogging
-  </code>
-</pre>
+@gem install justlogging@
 
 For rails:
 
 Add this to your enviroment.rb
-<pre>
-  <code>
-    config.gem "justlogging", :lib => 'justlogging'
-  </code>
-</pre>		
+@config.gem "justlogging", :lib => 'justlogging'@		
+
 and run 
-<pre>
-  <code>
-      rake gems:install
-      script/generate justlogging
-  </code>
-</pre>
+</code>
+  rake gems:install
+  script/generate justlogging
+</code>
 
 The generator copies a file called @justlogging.rb@ to the @RAILS_ROOT/config/initializer@ directory. You need to set you api key there and optionally your default log key.
 
 h2. Usage
 
 Configuration (only needed if not used as rails gem)
-@
+<code>
 Justlogging.configure do |config|
   config.api_key = 'api_key'
   config.log_key = 'log_name'
 end
-@
+</code>
 
 Normal log entry: 
 @Justlogging.log('this is my first entry')@
