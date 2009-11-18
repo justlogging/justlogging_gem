@@ -21,12 +21,17 @@ module Justlogging
       URI.parse('http://logs.justlogging.com/log')
     end
     
-    def log(entry, log_key = self.log_key)
+    def alert(entry, log_key = self.log_key)
+      log(entry, log_key, true)
+    end
+    
+    def log(entry, log_key = self.log_key, alert = false)
       params = {
         'log_key' => log_key,
         'entry' => entry,
         'access_key' => api_key
       }
+      params['alert'] = 'true' if alert
       
       response = begin
         Net::HTTP.post_form(url, params)
