@@ -18,10 +18,10 @@ Add this to your enviroment.rb
 @config.gem "justlogging", :lib => 'justlogging'@		
 
 and run 
-</code>
+<code><pre>
   rake gems:install
   script/generate justlogging
-</code>
+</pre></code>
 
 The generator copies a file called @justlogging.rb@ to the @RAILS_ROOT/config/initializer@ directory. You need to set you api key there and optionally your default log key.
 
