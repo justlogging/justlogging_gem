@@ -8,20 +8,20 @@ For other languages checkout:
 
 h2. Install
 
-Just install it as a plugin:
+Install it as a gem (on gemcutter):
+
 <pre>
   <code>
-  $ ./script/plugin install git://github.com/justlogging/rails_logger.git
-  $ ./script/generate justlogging
+    gem install justlogging
   </code>
 </pre>
 
-Or install it as a gem:
+For rails:
 
 Add this to your enviroment.rb
 <pre>
   <code>
-      config.gem "justlogging-rails_logger", :lib => 'justlogging'
+    config.gem "justlogging", :lib => 'justlogging'
   </code>
 </pre>		
 and run 
