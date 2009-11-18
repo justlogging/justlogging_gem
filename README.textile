@@ -5,6 +5,7 @@ This plugin enables easy logging from any Ruby application to our webservice.
 For other languages checkout: 
 * http://www.github.com/justlogging/php_logger
 * http://www.github.com/justlogging/python_logger
+* http://www.github.com/justlogging/perl_logger
 
 h2. Install
 
@@ -34,11 +35,16 @@ and run
 
 The generator copies a file called @justlogging.rb@ to the @RAILS_ROOT/config/initializer@ directory. You need to set you api key there and optionally your default log key.
 
-
-
 h2. Usage
 
+Normal log entry: 
 @Justlogging.log('this is my first entry')@
+
+Alert
+@Justlogging.alert('this is my first alert')@
+
+Optional parameter for alert and log is the log you want to post to like:
+@Justlogging.log('another log entry', 'messages')@
 
 Easy as pie.
 
