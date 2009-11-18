@@ -37,6 +37,14 @@ The generator copies a file called @justlogging.rb@ to the @RAILS_ROOT/config/in
 
 h2. Usage
 
+Configuration (only needed if not used as rails gem)
+@
+Justlogging.configure do |config|
+  config.api_key = 'api_key'
+  config.log_key = 'log_name'
+end
+@
+
 Normal log entry: 
 @Justlogging.log('this is my first entry')@
 
