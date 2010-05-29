@@ -5,7 +5,7 @@ require "net/http"
 module Justlogging
 
   class << self
-    attr_accessor :api_key, :log_key
+    attr_accessor :api_key, :log_key, :host
 
     def logger
       ActiveRecord::Base.logger
@@ -18,7 +18,7 @@ module Justlogging
     end
     
     def url
-      URI.parse('http://logs.justlogging.com/log')
+      URI.parse(host.present? ? host : 'http://logs.justlogging.com/log')
     end
     
     def alert(entry, log_key = self.log_key)
