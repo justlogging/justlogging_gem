@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{justlogging}
-  s.version = "1.1.6"
+  s.version = "1.1.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Robert Beekman"]
-  s.date = %q{2009-07-13}
+  s.date = %q{2010-05-29}
   s.description = %q{Justlogging is a webservice that allows you to log just about anything. This is the ruby gem for API interaction.}
   s.email = %q{info@justlogging.com}
   s.files = ["MIT-LICENSE", "README.textile", "lib/justlogging.rb", "generators/justlogging/justlogging_generator.rb", "generators/justlogging/templates/justlogging.rb"]

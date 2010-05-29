@@ -18,7 +18,7 @@ module Justlogging
     end
     
     def url
-      URI.parse(host.present? ? host : 'http://logs.justlogging.com/log')
+      URI.parse(host.present? ? "http://#{host}/log" : 'http://logs.justlogging.com/log')
     end
     
     def alert(entry, log_key = self.log_key)
